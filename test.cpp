@@ -18,13 +18,11 @@ public:
 
 void testMultiplication() {
     Dollar* five = new Dollar(5);
-    Dollar* product = five->times(2);
-    assertEquals(10, product->amount);
-    product = five->times(3);
-    assertEquals(15, product->amount);
+    assertEquals(10, five->times(2)->amount);
+    assertEquals(15, five->times(3)->amount);
     delete five;
-    delete product;
 }
+
 
 void assertEquals(int expected, int actual) {
     if (expected != actual) {
